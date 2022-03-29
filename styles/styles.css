@@ -13,6 +13,7 @@
 }
 body
 {
+    position: relative;
     font-family: 'Poppins', sans-serif;
 }
 hr{
@@ -21,10 +22,16 @@ hr{
     color: var(--clr-primary-100);
     height: 1px;
 }
+header{
+    margin-top: 60px;
+}
+
+
 .nav{
     display: flex;
     background-color: var(--clr-primary-700);
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top:0;
 
 }
@@ -41,7 +48,7 @@ hr{
     text-decoration: none;
     color: var(--clr-light-100); 
     width: 100%;
-    padding: 25px 0;
+    padding: 25px;
 }
 .nav li{
     display: flex;
@@ -164,7 +171,7 @@ table tr:nth-child(even), th{
 .footer-contact a{
     color:inherit;
     text-decoration: underline 0.15em var(--clr-primary-700);
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.2em;;
     transition: text-decoration-color 300ms, text-underline-offset 300ms;
 }
 
@@ -190,7 +197,7 @@ table tr:nth-child(even), th{
     }
     .nav li{
         flex-grow:0;
-        padding: 0 2rem;
+        padding: 0;
     }
     .nav li:first-child, 
     .nav li:last-child{
