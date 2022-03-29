@@ -15,9 +15,18 @@ body
 {
     font-family: 'Poppins', sans-serif;
 }
+hr{
+    border:none;
+    border-top: solid;
+    color: var(--clr-primary-100);
+    height: 1px;
+}
 .nav{
     display: flex;
     background-color: var(--clr-primary-700);
+    position: sticky;
+    top:0;
+
 }
 
 .nav .links-list{
@@ -79,7 +88,13 @@ header h2{
     text-align: center;
     padding: 2.5rem;
 }
-
+/* #products{
+    margin-top: 6rem;
+} */
+#products h1{
+    text-align: center;
+    padding: 2rem;
+}
 .split{
     display:flex;
     justify-content: space-between;
@@ -115,7 +130,7 @@ img{
 }
 .table-container td{
     padding: 0.2rem 1rem;
-    text-align: left;
+    text-align: center;
 }
 .table-container td:last-child, .table-container th{
     padding: 0.2rem 1rem;
@@ -127,7 +142,7 @@ table tr:nth-child(even), th{
 }
 .about{
     max-width: 80%;
-    margin: 2rem auto;
+    margin: 7rem auto;
 }
 .about h2{
     text-align: center;
@@ -145,6 +160,17 @@ table tr:nth-child(even), th{
 }
 .footer-contact p{
     color:white;
+}
+.footer-contact a{
+    color:inherit;
+    text-decoration: underline 0.15em var(--clr-primary-700);
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 300ms, text-underline-offset 300ms;
+}
+
+.footer-contact a:hover{
+    text-decoration-color: white;
+    text-underline-offset: 0.4em;
 }
 /* .products-container{
     max-width: 80%;
@@ -197,4 +223,8 @@ table tr:nth-child(even), th{
      .footer-contact p{
          text-align: center;
         }
+    .split:nth-child(even)
+    {
+        flex-direction: column-reverse;
+    }
 }
