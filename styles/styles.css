@@ -187,4 +187,8 @@ table tr:nth-child(even), th{
      .split{
          flex-direction: column;
      }
+     .split h2, .split p{
+         text-align: center;
+         
+     }
 }
