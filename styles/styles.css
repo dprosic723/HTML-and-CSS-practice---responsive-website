@@ -191,4 +191,10 @@ table tr:nth-child(even), th{
          text-align: center;
          
      }
+     .footer-contact{
+         flex-direction: column;
+     }
+     .footer-contact p{
+         text-align: center;
+        }
 }
