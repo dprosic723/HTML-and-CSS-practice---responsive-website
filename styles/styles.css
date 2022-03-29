@@ -10,7 +10,9 @@
 *{
     box-sizing: border-box;
     margin:0;
+    padding: 0;
 }
+
 body
 {
     position: relative;
@@ -33,29 +35,22 @@ header{
     position: fixed;
     width: 100%;
     top:0;
-
 }
 
 .nav .links-list{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
     list-style-type: none;
-    flex-grow: 1;
+    
 }
 .nav .links-list a{
     text-decoration: none;
     color: var(--clr-light-100); 
-    width: 100%;
     padding: 25px;
 }
 .nav li{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
-    text-align: center;
 }
 .nav .links-list li:hover{
     background-color: var(--clr-primary-800);
@@ -215,7 +210,7 @@ table tr:nth-child(even), th{
 
     
 }
-@media (max-width:420px)
+@media (max-width: 440px)
 {
      .split{
          flex-direction: column;
@@ -233,5 +228,12 @@ table tr:nth-child(even), th{
     .split:nth-child(even)
     {
         flex-direction: column-reverse;
+    }
+    .nav a{
+        font-size: 13px;
+        padding: 1px;
+    }
+    .logo img{
+        max-width: 60px;
     }
 }
