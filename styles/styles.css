@@ -224,9 +224,7 @@ table tr:nth-child(even), th{
     height: 3px;
     width: 100%;
 }
-.active{
-    display: flex !important;
-}
+
 @media (min-width:800px){
     .products-container{
         display: grid;
@@ -255,7 +253,6 @@ table tr:nth-child(even), th{
     .logo img{
         max-width: 90px;
     }
-    
     
 }
 @media (max-width: 500px)

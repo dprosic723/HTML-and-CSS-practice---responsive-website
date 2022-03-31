@@ -5,6 +5,10 @@ document.querySelector(".contact-form button").addEventListener("click", functio
 
 const hamburgerList = document.querySelector(".links-list");
 document.querySelector(".hamburger-menu").addEventListener("click", () => {
-    hamburgerList.classList.toggle("active");
+    if (hamburgerList.style.display === "flex") {
+        hamburgerList.style.display = "none";
+      } else {
+        hamburgerList.style.display = "flex";
+      }
     console.log(hamburgerList.classList);
 });
