@@ -1,14 +1,21 @@
-document.querySelector(".contact-form button").addEventListener("click", function(){
-    console.log(document.getElementById("text-input").value);
+
+
+const formButton = document.querySelector(".contact-form button");
+const formMessage = document.getElementById("text-input");
+
+formButton.addEventListener("click", function(){
+    console.log(formMessage.value);
+    formMessage.value = "";
 });
 
 
 const hamburgerList = document.querySelector(".links-list");
-document.querySelector(".hamburger-menu").addEventListener("click", () => {
-    if (hamburgerList.style.display === "flex") {
-        hamburgerList.style.display = "none";
-      } else {
-        hamburgerList.style.display = "flex";
-      }
-    console.log(hamburgerList.classList);
-});
+const hamburgerMenuButton = document.querySelector(".hamburger-menu");
+const hamburgerListItems = document.querySelectorAll(".links-list li");
+hamburgerMenuButton.addEventListener("click", toggleHamburgerMenu);
+for(var i = 0; i<hamburgerListItems.length; i++)
+{hamburgerListItems[i].addEventListener("click", toggleHamburgerMenu);}
+function toggleHamburgerMenu() {
+    hamburgerList.classList.toggle("active");
+    console.log(hamburgerList.classList)
+}
