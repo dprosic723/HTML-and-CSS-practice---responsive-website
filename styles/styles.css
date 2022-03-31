@@ -178,7 +178,55 @@ table tr:nth-child(even), th{
     max-width: 80%;
     margin: auto;
 } */
+.contact-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7rem auto;
+    max-width: 700px;
+    padding: 10px;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+.contact-form button{
+    margin: 20px 0;
+    width: 100px;
+    padding: 5px;
+    font-size: 1em;
+    background-color: var(--clr-primary-100);
+    border: 1px solid var(--clr-primary-800);
+    cursor: pointer;
+}
 
+.contact-form button:hover{
+    background-color: var(--clr-primary-700);
+}
+
+.contact-form h2{
+    margin-bottom: 10px;
+}
+.hamburger-menu{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    width: 40px;
+    display: none;
+}
+.hamburger-menu .bar{
+    background-color: white;
+    height: 3px;
+    width: 100%;
+}
+.active{
+    display: flex !important;
+}
 @media (min-width:800px){
     .products-container{
         display: grid;
@@ -207,17 +255,22 @@ table tr:nth-child(even), th{
     .logo img{
         max-width: 90px;
     }
-
+    
     
 }
-@media (max-width: 440px)
+@media (max-width: 500px)
 {
+    .hamburger-menu{
+        display: flex;
+    }
+    .nav{
+        flex-direction: column;
+    }
      .split{
          flex-direction: column;
      }
      .split h2, .split p{
          text-align: center;
-         
      }
      .footer-contact{
          flex-direction: column;
@@ -234,6 +287,24 @@ table tr:nth-child(even), th{
         padding: 1px;
     }
     .logo img{
-        max-width: 60px;
+        height: 75px;
     }
+    .nav .logo{
+        max-width: 175px;
+    }
+    .nav .links-list{
+        display: none;
+        flex-direction: column;
+    }
+    .nav .links-list a{
+        width: 100%;
+        text-align: center;
+    }
+    .nav li:first-child, 
+    .nav li:last-child{
+        border-width: 1px 0;
+        border-color: var(--clr-primary-800);
+        border-style: solid;
+    }
+
 }
