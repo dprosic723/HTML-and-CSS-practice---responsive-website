@@ -27,10 +27,22 @@ img {
   max-width: 100%;
 }
 .active {
-    display: flex;
-  }
+  display: flex;
+}
 
-/* NAVBAR */
+/* NAVBAR LOGO AND LINK LIST */
+
+.logo {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.logo img {
+  max-width: 90px;
+}
 
 .nav {
   display: flex;
@@ -40,7 +52,6 @@ img {
   top: 0;
   z-index: 3;
 }
-
 .nav .links-list {
   display: flex;
   list-style-type: none;
@@ -54,14 +65,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--clr-primary-700);
+  border-collapse: collapse;
 }
 .nav .links-list li:hover {
   background-color: var(--clr-primary-800);
-}
-.nav li:first-child,
-.nav li:last-child {
-  border-right: 1px solid black;
-  border-left: 1px solid black;
 }
 
 /* HAMBURGER MENU */
@@ -89,19 +97,6 @@ img {
   background-color: white;
   height: 3px;
   width: 100%;
-}
-
-/* NAVBAR LOGO AND LINK LIST */
-.logo {
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-.logo img {
-  max-width: 90px;
 }
 
 /* HEADER */
@@ -188,7 +183,6 @@ th {
   text-align: center;
 }
 
-
 #contact {
   background-color: var(--clr-primary-700);
 }
@@ -220,7 +214,6 @@ th {
 .contact-form h2 {
   margin-bottom: 10px;
 }
-
 
 .footer-contact {
   display: flex;
@@ -258,8 +251,9 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   width: 80%;
-  margin: 30px auto;
+  margin: 30px 20px;
   background-color: var(--clr-primary-100);
   border-radius: 10px;
   text-align: center;
@@ -303,6 +297,9 @@ th {
 body.page2 {
   background-color: var(--clr-primary-100);
 }
+
+
+
 @media (min-width: 800px) {
   .products-container {
     display: grid;
@@ -318,11 +315,6 @@ body.page2 {
     flex-grow: 0;
     padding: 0;
   }
-  .nav li:first-child,
-  .nav li:last-child {
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-  }
   .logo {
     background-color: black;
     padding: 0 2rem;
@@ -332,9 +324,15 @@ body.page2 {
     max-width: 90px;
   }
 }
+
+
+
 @media (max-width: 500px) {
   .news-container {
     flex-direction: column;
+  }
+  .news{
+      margin:30px auto;
   }
   .hamburger-menu {
     display: flex;
@@ -378,11 +376,5 @@ body.page2 {
   .nav .links-list a {
     width: 100%;
     text-align: center;
-  }
-  .nav li:first-child,
-  .nav li:last-child {
-    border-width: 1px 0;
-    border-color: var(--clr-primary-800);
-    border-style: solid;
   }
 }
