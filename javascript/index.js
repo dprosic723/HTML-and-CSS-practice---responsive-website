@@ -19,15 +19,6 @@ function toggleHamburgerMenu() {
     console.log(hamburgerList.classList)
 }
 
-//Making news section clickable
-const news1 = document.querySelector(".news1");
-const news2 = document.querySelector(".news2");
-const news3 = document.querySelector(".news3");
-news1.onclick = function(){location.href = "night-vision-goggles-and-binoculars-the-possibilities-of-modern-technology.html";}
-news2.onclick = function(){location.href = "spotlight-steineroptics-products-focus-on-reliability-ruggedness-and-optical-clarity.html";}
-news3.onclick = function(){location.href = "range-day-roundup-reflex-sight-cooling-body-armor-popup-targets-and-much-more.html";}
-
-
 //console log news title
 const newsTitles = document.querySelectorAll(".news-heading");
 for(var i = 0; i < newsTitles.length; i++){
@@ -44,3 +35,19 @@ function convertStringForWeb(string){
     return string;
 }
 
+//SWIPER
+
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
