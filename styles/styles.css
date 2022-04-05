@@ -123,7 +123,9 @@ header h2 {
 }
 
 /*PRODUCTS*/
-
+#products{
+  scroll-margin-top: 76px;
+}
 #products h1 {
   text-align: center;
   padding: 2rem;
@@ -178,6 +180,7 @@ th {
 .about {
   max-width: 80%;
   margin: 7rem auto;
+  scroll-margin-top: 80px;
 }
 .about h2 {
   text-align: center;
@@ -214,7 +217,10 @@ th {
 .contact-form h2 {
   margin-bottom: 10px;
 }
-
+#contact{
+  width: 100%;
+  scroll-margin-top: 80px;
+}
 .footer-contact {
   display: flex;
   background-color: var(--clr-primary-700);
@@ -334,12 +340,20 @@ body.page2 {
 .our-team-container .paragraph{
   margin: 15px 0;
 }
-.swiper-wrapper{
-  height: 400px;
+.swiper-button-next::after, .swiper-button-prev::after{
+  color:white;
 }
-
+.swiper-pagination-bullet {
+  
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  --swiper-theme-color:white;
+  
+}
 .avatar1, .avatar2, .avatar3{
-  height: 400px;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -386,7 +400,9 @@ body.page2 {
     display: grid;
     grid-template-columns: 50% 50%;
   }
-
+  .swiper{
+    height: 700px;
+  }
   .nav {
     justify-content: space-between;
   }
